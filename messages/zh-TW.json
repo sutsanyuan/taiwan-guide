@@ -6,5 +6,25 @@
   "home": {
     "title": "台灣私房景點",
     "subtitle": "在地人推薦的景點與餐廳"
+  },
+  "categories": {
+    "sight": "景點",
+    "food": "餐廳"
+  },
+  "regions": {
+    "taipei": "台北",
+    "new-taipei": "新北",
+    "hsinchu": "新竹",
+    "taichung": "台中",
+    "nantou": "南投",
+    "chiayi": "嘉義",
+    "tainan": "台南",
+    "kaohsiung": "高雄",
+    "hualien": "花蓮"
+  },
+  "place": {
+    "openMap": "在 Google 地圖開啟",
+    "michelinBib": "米其林必比登推介",
+    "notice": "注意："
   }
 }

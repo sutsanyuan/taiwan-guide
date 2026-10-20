@@ -17,6 +17,7 @@ export type MessageKey = Paths<Messages>;
 const loaders: Record<Locale, () => Promise<Messages>> = {
   "zh-TW": () => import("@/messages/zh-TW.json").then((m) => m.default),
   en: () => import("@/messages/en.json").then((m) => m.default),
+  es: () => import("@/messages/es.json").then((m) => m.default),
 };
 
 // 用法：
@@ -37,3 +38,6 @@ export async function getT(locale: Locale) {
     return typeof value === "string" ? value : key;
   };
 }
+
+// t() 函式本身的型別，要把 t 傳給其他元件時用
+export type TFunction = Awaited<ReturnType<typeof getT>>;

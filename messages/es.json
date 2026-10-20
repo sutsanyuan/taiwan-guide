@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "Joyas ocultas de Taiwán",
+    "description": "Para amigos que visitan Taiwán: lugares y restaurantes seleccionados, con enlaces a Google Maps"
+  },
+  "home": {
+    "title": "Joyas ocultas de Taiwán",
+    "subtitle": "Lugares y restaurantes recomendados por alguien de aquí"
+  },
+  "categories": {
+    "sight": "Lugares",
+    "food": "Comida"
+  },
+  "regions": {
+    "taipei": "Taipéi",
+    "new-taipei": "Nuevo Taipéi",
+    "hsinchu": "Hsinchu",
+    "taichung": "Taichung",
+    "nantou": "Nantou",
+    "chiayi": "Chiayi",
+    "tainan": "Tainan",
+    "kaohsiung": "Kaohsiung",
+    "hualien": "Hualien"
+  },
+  "place": {
+    "openMap": "Abrir en Google Maps",
+    "michelinBib": "MICHELIN Bib Gourmand",
+    "notice": "Atención:"
+  }
+}

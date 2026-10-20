@@ -1,6 +1,6 @@
 // 網站支援的語言清單。要加語言（例如 "de"）時，只改這裡，
 // 再新增對應的 messages/de.json。
-export const locales = ["zh-TW", "en"] as const;
+export const locales = ["zh-TW", "en", "es"] as const;
 
 // Locale 型別 = "zh-TW" | "en"，由上面的陣列自動推導出來。
 export type Locale = (typeof locales)[number];
@@ -18,4 +18,5 @@ export function isLocale(value: string): value is Locale {
 export const localeNames: Record<Locale, string> = {
   "zh-TW": "中文",
   en: "English",
+  es: "Español",
 };
