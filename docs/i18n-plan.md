@@ -1,6 +1,8 @@
 # 第一階段多語系計畫（不使用 i18n 套件）
 
-> 狀態：第 1 步完成。下一步：**第 2 步**。
+> 狀態：第一階段（第 1–4 步）完成。
+>
+> 跟計畫不同的地方：專案開了 `cacheComponents`，不能用 `dynamicParams = false`，改成在 layout 裡用 `isLocale()` 檢查、不支援的語言呼叫 `notFound()`。
 > 參考：`node_modules/next/dist/docs/01-app/02-guides/internationalization.md`（Next.js 16.4.2 內附文件）
 
 ## 目標
@@ -77,6 +79,6 @@ taiwan-guide/
 ## 實作步驟（每步做完確認再繼續）
 
 - [x] **第 1 步**：建立 `messages/`、`config.ts`、`t.ts`（畫面還不會變，先理解 t() 怎麼運作）
-- [ ] **第 2 步**：把頁面搬進 `app/[lang]/`，設定 `<html lang>`，首頁改用 `t()` 顯示文字
-- [ ] **第 3 步**：設定 `/` 導向 `/zh-TW`
-- [ ] **第 4 步**：加上語言切換按鈕
+- [x] **第 2 步**：把頁面搬進 `app/[lang]/`，設定 `<html lang>`，首頁改用 `t()` 顯示文字
+- [x] **第 3 步**：設定 `/` 導向 `/zh-TW`
+- [x] **第 4 步**：加上語言切換按鈕

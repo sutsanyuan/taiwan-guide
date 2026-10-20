@@ -12,3 +12,10 @@ export const defaultLocale: Locale = "zh-TW";
 export function isLocale(value: string): value is Locale {
   return (locales as readonly string[]).includes(value);
 }
+
+// 語言切換按鈕上顯示的名稱。用各語言自己的寫法，不翻譯：
+// 看不懂目前語言的人，也找得到自己的語言。
+export const localeNames: Record<Locale, string> = {
+  "zh-TW": "中文",
+  en: "English",
+};
