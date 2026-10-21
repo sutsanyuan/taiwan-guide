@@ -25,6 +25,7 @@
   "place": {
     "openMap": "Open in Google Maps",
     "michelinBib": "MICHELIN Bib Gourmand",
-    "notice": "Heads-up:"
+    "notice": "Heads-up:",
+    "photo": "Photo"
   }
 }

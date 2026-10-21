@@ -14,6 +14,13 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  // 允許 <Image> 載入 Wikimedia Commons 的圖片（其他網域一律擋掉）
+  images: {
+    remotePatterns: [
+      new URL("https://thumb.wikimedia.org/wikipedia/commons/**"),
+      new URL("https://upload.wikimedia.org/wikipedia/commons/**"),
+    ],
+  },
   experimental: {
     agentFeedback: true,
   },

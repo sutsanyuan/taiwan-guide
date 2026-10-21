@@ -25,6 +25,7 @@
   "place": {
     "openMap": "在 Google 地圖開啟",
     "michelinBib": "米其林必比登推介",
-    "notice": "注意："
+    "notice": "注意：",
+    "photo": "照片"
   }
 }

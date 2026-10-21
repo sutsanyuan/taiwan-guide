@@ -9,6 +9,7 @@ import type { Place } from "@/lib/places";
 //
 // 餐廳資料來源：2026 米其林必比登推介名單（2026 年 7 月公布）
 // 景點參考：Lonely Planet、各縣市觀光資訊
+// 景點照片：Wikimedia Commons（只存網址，不存圖片檔；必須標示作者和授權）
 // ─────────────────────────────────────────────────────────────
 
 export const places: Place[] = [
@@ -26,6 +27,13 @@ export const places: Place[] = [
       es: "Alberga una enorme colección de tesoros imperiales chinos; la Col de Jade y la Piedra con Forma de Carne son las piezas estrella. Reserva al menos media jornada.",
     },
     mapQuery: "國立故宮博物院 台北",
+    image: {
+      src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/National_Palace_Museum%2C_Taipei.jpg/1280px-National_Palace_Museum%2C_Taipei.jpg",
+      credit: "Jason Zhang",
+      license: "CC0",
+      licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:National_Palace_Museum,_Taipei.jpg",
+    },
   },
   {
     id: "dadaocheng-wharf",
@@ -38,6 +46,13 @@ export const places: Place[] = [
       es: "Un antiguo muelle a orillas del río Tamsui, precioso al atardecer. Muy cerca, la calle Dihua está llena de tiendas antiguas de productos secos y té.",
     },
     mapQuery: "大稻埕碼頭 台北",
+    image: {
+      src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Skyline_view_from_Dadaocheng_Wharf_20090418.jpg/1280px-Skyline_view_from_Dadaocheng_Wharf_20090418.jpg",
+      credit: "黃 zero",
+      license: "CC BY-SA 2.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Skyline_view_from_Dadaocheng_Wharf_20090418.jpg",
+    },
   },
   {
     id: "longshan-temple",
@@ -50,6 +65,13 @@ export const places: Place[] = [
       es: "Uno de los templos más conocidos de Taipéi, fundado en la dinastía Qing. Un buen lugar para ver cómo reza la gente local en su día a día.",
     },
     mapQuery: "艋舺龍山寺 台北",
+    image: {
+      src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Longshan_Temple%2C_Taipei_01.jpg/1280px-Longshan_Temple%2C_Taipei_01.jpg",
+      credit: "Bernard Gagnon",
+      license: "CC BY-SA 3.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Longshan_Temple,_Taipei_01.jpg",
+    },
   },
   {
     id: "elephant-mountain",
@@ -62,6 +84,13 @@ export const places: Place[] = [
       es: "Un sendero corto junto a la ciudad. Tras 20–30 minutos de subida tienes vistas de Taipei 101 y de toda la ciudad.",
     },
     mapQuery: "象山步道 台北",
+    image: {
+      src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/20190418_Elephant_Mountain_view-4.jpg/1280px-20190418_Elephant_Mountain_view-4.jpg",
+      credit: "Balon Greyjoy",
+      license: "CC0",
+      licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:20190418_Elephant_Mountain_view-4.jpg",
+    },
   },
 
   // --- 新北 ---
@@ -76,6 +105,13 @@ export const places: Place[] = [
       es: "Un pueblo en la ladera con callejuelas, faroles rojos y casas de té; tiene más encanto al anochecer, cuando se encienden las luces. Los fines de semana se llena, así que mejor ir entre semana.",
     },
     mapQuery: "九份老街 新北",
+    image: {
+      src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Jiufen_at_night_lantern_glow.jpg/1280px-Jiufen_at_night_lantern_glow.jpg",
+      credit: "Sunkenbean",
+      license: "CC BY-SA 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Jiufen_at_night_lantern_glow.jpg",
+    },
   },
 
   // --- 南投 ---
@@ -90,6 +126,13 @@ export const places: Place[] = [
       es: "El lago natural más grande de Taiwán. Puedes cruzarlo en barco, recorrer la orilla en bici o subir al teleférico para ver el lago desde arriba.",
     },
     mapQuery: "日月潭 南投",
+    image: {
+      src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/%E6%97%A5%E6%9C%88%E6%BD%AD%E6%B0%B4%E7%A4%BE%E7%A2%BC%E9%A0%AD_View_of_Shuishe_Pier_from_Sun_Moon_Lake_20151213.jpg/1280px-%E6%97%A5%E6%9C%88%E6%BD%AD%E6%B0%B4%E7%A4%BE%E7%A2%BC%E9%A0%AD_View_of_Shuishe_Pier_from_Sun_Moon_Lake_20151213.jpg",
+      credit: "LowensteinYang",
+      license: "CC BY-SA 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:%E6%97%A5%E6%9C%88%E6%BD%AD%E6%B0%B4%E7%A4%BE%E7%A2%BC%E9%A0%AD_View_of_Shuishe_Pier_from_Sun_Moon_Lake_20151213.jpg",
+    },
   },
 
   // --- 嘉義 ---
@@ -104,6 +147,13 @@ export const places: Place[] = [
       es: "Una zona de bosque de montaña con un tren forestal histórico y senderos entre árboles gigantes, famosa por su amanecer sobre un mar de nubes.",
     },
     mapQuery: "阿里山國家森林遊樂區",
+    image: {
+      src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Alishan_Taiwan_Alishan-Forest-Railway-02.jpg/1280px-Alishan_Taiwan_Alishan-Forest-Railway-02.jpg",
+      credit: "CEphoto, Uwe Aranas",
+      license: "CC BY-SA 3.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Alishan_Taiwan_Alishan-Forest-Railway-02.jpg",
+    },
   },
 
   // --- 台南 ---
@@ -118,6 +168,13 @@ export const places: Place[] = [
       es: "Originalmente el Fuerte Provintia, construido por los holandeses en 1653 y reconstruido después como pabellones de estilo chino. Un buen punto de partida para conocer la historia de Tainan.",
     },
     mapQuery: "赤崁樓 台南",
+    image: {
+      src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Tainan_Taiwan_Fort-Provintia-01.jpg/1280px-Tainan_Taiwan_Fort-Provintia-01.jpg",
+      credit: "CEphoto, Uwe Aranas",
+      license: "CC BY-SA 3.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Tainan_Taiwan_Fort-Provintia-01.jpg",
+    },
   },
   {
     id: "anping-old-fort",
@@ -130,6 +187,13 @@ export const places: Place[] = [
       es: "Los restos del Fuerte Zeelandia, construido por los holandeses en 1624 y una de las fortificaciones más antiguas de Taiwán. Sube a la torre mirador para ver Anping.",
     },
     mapQuery: "安平古堡 台南",
+    image: {
+      src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Tainan_Taiwan_Fort-Zeelandia-01.jpg/1280px-Tainan_Taiwan_Fort-Zeelandia-01.jpg",
+      credit: "CEphoto, Uwe Aranas",
+      license: "CC BY-SA 3.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Tainan_Taiwan_Fort-Zeelandia-01.jpg",
+    },
   },
   {
     id: "anping-tree-house",
@@ -142,6 +206,13 @@ export const places: Place[] = [
       es: "Un antiguo almacén de la compañía comercial británica Tait & Co., hoy completamente envuelto por raíces de baniano, como si la naturaleza hubiera recuperado el edificio.",
     },
     mapQuery: "安平樹屋 台南",
+    image: {
+      src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Anping_Tree_House%2C_Tainan_%28Taiwan%29.jpg/1280px-Anping_Tree_House%2C_Tainan_%28Taiwan%29.jpg",
+      credit: "Mk2010",
+      license: "CC BY-SA 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Anping_Tree_House,_Tainan_(Taiwan).jpg",
+    },
   },
   {
     id: "confucius-temple",
@@ -154,6 +225,13 @@ export const places: Place[] = [
       es: "Construido en 1665, es el primer templo confuciano de Taiwán y se le conoce como la primera escuela de la isla. Sus muros rojos y árboles centenarios invitan a pasear sin prisa.",
     },
     mapQuery: "臺南孔廟",
+    image: {
+      src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Exterior_of_Tainan_Confucius_Temple_in_November_2017.jpg/1280px-Exterior_of_Tainan_Confucius_Temple_in_November_2017.jpg",
+      credit: "Nick-D",
+      license: "CC BY-SA 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Exterior_of_Tainan_Confucius_Temple_in_November_2017.jpg",
+    },
   },
   {
     id: "shennong-street",
@@ -166,6 +244,13 @@ export const places: Place[] = [
       es: "Una calle de la época Qing con casas tienda antiguas, hoy llena de tiendas pequeñas, cafés y bares. Está más bonita de noche, con los faroles encendidos.",
     },
     mapQuery: "神農街 台南",
+    image: {
+      src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Tainan_Shennong_St_1.jpg/1280px-Tainan_Shennong_St_1.jpg",
+      credit: "Andrzej Otrębski",
+      license: "CC BY-SA 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Tainan_Shennong_St_1.jpg",
+    },
   },
   {
     id: "hayashi-department-store",
@@ -178,6 +263,13 @@ export const places: Place[] = [
       es: "Unos grandes almacenes de la época japonesa, inaugurados en 1932. Hoy venden productos de diseño de Tainan, y en la azotea se conservan el antiguo santuario sintoísta y marcas de balas de la guerra.",
     },
     mapQuery: "林百貨 台南",
+    image: {
+      src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Hayashi_Department_Store_in_Tainan%2C_Taiwan_%28%E6%9E%97%E7%99%BE%E8%B2%A8%EF%BC%89.jpg/1280px-Hayashi_Department_Store_in_Tainan%2C_Taiwan_%28%E6%9E%97%E7%99%BE%E8%B2%A8%EF%BC%89.jpg",
+      credit: "Lchung9779",
+      license: "CC0",
+      licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Hayashi_Department_Store_in_Tainan,_Taiwan_(%E6%9E%97%E7%99%BE%E8%B2%A8%EF%BC%89.jpg",
+    },
   },
   {
     id: "chimei-museum",
@@ -190,6 +282,13 @@ export const places: Place[] = [
       es: "Un museo privado en un edificio de estilo palacio europeo, con arte occidental, instrumentos musicales y armas. Su colección de violines es famosa en todo el mundo.",
     },
     mapQuery: "奇美博物館 台南",
+    image: {
+      src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Chimei_Museum_20190210_%28cropped%29.jpg/1280px-Chimei_Museum_20190210_%28cropped%29.jpg",
+      credit: "Deon",
+      license: "CC BY-SA 2.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Chimei_Museum_20190210_(cropped).jpg",
+    },
   },
 
   // --- 高雄 ---
@@ -204,6 +303,13 @@ export const places: Place[] = [
       es: "Antiguos almacenes del puerto convertidos en un barrio artístico con exposiciones, arte público y tiendas. Alquila una bici y recorre el paseo marítimo.",
     },
     mapQuery: "駁二藝術特區 高雄",
+    image: {
+      src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/202407_Penglai_warehouses%2C_Pier-2_Art_Center%2C_Kaohsiung.jpg/1280px-202407_Penglai_warehouses%2C_Pier-2_Art_Center%2C_Kaohsiung.jpg",
+      credit: "Jonashtand",
+      license: "CC BY-SA 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:202407_Penglai_warehouses,_Pier-2_Art_Center,_Kaohsiung.jpg",
+    },
   },
   {
     id: "lotus-pond",
@@ -216,6 +322,13 @@ export const places: Place[] = [
       es: "Las Pagodas del Dragón y el Tigre sobre el lago son un símbolo de Kaohsiung. Según la tradición, entrar por la boca del dragón y salir por la del tigre convierte la mala suerte en buena.",
     },
     mapQuery: "蓮池潭龍虎塔 高雄",
+    image: {
+      src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Kaohsiung_Taiwan_Dragon-and-Tiger-Pagodas-01.jpg/1280px-Kaohsiung_Taiwan_Dragon-and-Tiger-Pagodas-01.jpg",
+      credit: "CEphoto, Uwe Aranas",
+      license: "CC BY-SA 3.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Kaohsiung_Taiwan_Dragon-and-Tiger-Pagodas-01.jpg",
+    },
   },
 
   // --- 花蓮 ---
@@ -230,6 +343,13 @@ export const places: Place[] = [
       es: "Un desfiladero de mármol con acantilados y valles impresionantes, además de los famosos acantilados de Qingshui que caen al mar.",
     },
     mapQuery: "太魯閣國家公園遊客中心",
+    image: {
+      src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Taroko-Gorge_Hualien_Taiwan_Cihmu-Bridge-at-Taroko-National-Park-01.jpg/1280px-Taroko-Gorge_Hualien_Taiwan_Cihmu-Bridge-at-Taroko-National-Park-01.jpg",
+      credit: "CEphoto, Uwe Aranas",
+      license: "CC BY-SA 3.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Taroko-Gorge_Hualien_Taiwan_Cihmu-Bridge-at-Taroko-National-Park-01.jpg",
+    },
     notice: {
       "zh-TW": "2024 年地震後只部分開放：車輛限時段通過峽谷，燕子口、砂卡礑步道仍封閉（2026 年 8 月資訊）。出發前請查官網。",
       en: "Only partly open since the 2024 earthquake: cars may pass through the gorge only at set times, and Swallow Grotto and the Shakadang Trail remain closed (as of August 2026). Check the official website before you go.",
