@@ -26,6 +26,15 @@
     "openMap": "在 Google 地圖開啟",
     "michelinBib": "米其林必比登推介",
     "notice": "注意：",
-    "photo": "照片"
+    "photo": "照片",
+    "back": "回到全部地點",
+    "moreInRegion": "同地區的其他推薦",
+    "localPick": "在地私房"
+  },
+  "filter": {
+    "all": "全部",
+    "type": "類型",
+    "region": "地區",
+    "empty": "沒有符合條件的地點，換個篩選條件試試看。"
   }
 }

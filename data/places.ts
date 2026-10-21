@@ -357,7 +357,7 @@ export const places: Place[] = [
     },
   },
 
-  // ===== 餐廳 Food（全部是 2026 米其林必比登推介）=====
+  // ===== 餐廳 Food（2026 米其林必比登推介＋我的私房推薦 localPick）=====
 
   // --- 台北 ---
   {
@@ -549,6 +549,114 @@ export const places: Place[] = [
     },
     mapQuery: "八寶彬圓仔惠 國華街 台南",
     michelinBib: 2026,
+  },
+
+  // 第一次來台南必吃的經典小吃（同樣是 2026 必比登）
+  {
+    id: "xiao-gong-yuan-danzai",
+    category: "food",
+    region: "tainan",
+    name: { "zh-TW": "小公園擔仔麵", en: "Xiao Gong Yuan Danzai Noodles", es: "Xiao Gong Yuan Danzai Noodles" },
+    description: {
+      "zh-TW": "擔仔麵是台南最具代表性的小吃：小小一碗，湯麵上放肉燥和鮮蝦。第一次來台南一定要吃。",
+      en: "Danzai noodles are Tainan's signature snack: a small bowl of noodles in broth, topped with minced braised pork and a shrimp. A must on your first visit.",
+      es: "Los fideos danzai son el plato más emblemático de Tainan: un cuenco pequeño de fideos en caldo con cerdo picado guisado y una gamba. Imprescindibles en tu primera visita.",
+    },
+    mapQuery: "小公園擔仔麵 台南",
+    michelinBib: 2026,
+  },
+  {
+    id: "huang-jia-shrimp-roll",
+    category: "food",
+    region: "tainan",
+    name: { "zh-TW": "黃家蝦捲", en: "Huang Jia Shrimp Rolls", es: "Huang Jia Shrimp Rolls" },
+    description: {
+      "zh-TW": "炸得酥脆的蝦捲，是台南經典小吃之一，適合邊走邊吃。",
+      en: "Crispy deep-fried shrimp rolls, one of Tainan's classic snacks and easy to eat on the go.",
+      es: "Rollitos de gamba fritos y crujientes, uno de los aperitivos clásicos de Tainan, fáciles de comer mientras paseas.",
+    },
+    mapQuery: "黃家蝦捲 台南",
+    michelinBib: 2026,
+  },
+  {
+    id: "kai-yuan-mackerel-soup",
+    category: "food",
+    region: "tainan",
+    name: { "zh-TW": "開元紅燒土魠魚羮", en: "Kai Yuan Spanish Mackerel Thick Soup", es: "Kai Yuan Spanish Mackerel Thick Soup" },
+    description: {
+      "zh-TW": "先炸過的土魠魚塊放進酸甜的羹湯裡，可以配米粉或意麵，是台南人熟悉的味道。",
+      en: "Fried chunks of Spanish mackerel in a sweet-and-sour thick soup, with rice vermicelli or noodles. A taste every Tainan local knows.",
+      es: "Trozos de caballa frita en una sopa espesa agridulce, con fideos de arroz o de trigo. Un sabor que todo el mundo en Tainan conoce.",
+    },
+    mapQuery: "開元紅燒土魠魚羮 台南",
+    michelinBib: 2026,
+  },
+  {
+    id: "xian-zheng-ba-wan",
+    category: "food",
+    region: "tainan",
+    name: { "zh-TW": "鮮蒸蝦仁肉圓", en: "Xian Zheng Shrimp Ba-wan", es: "Xian Zheng Shrimp Ba-wan" },
+    description: {
+      "zh-TW": "台南的肉圓是用蒸的，跟中北部油炸的不一樣，內餡有蝦仁，口感比較清爽。",
+      en: "Tainan ba-wan are steamed rather than fried like in the north, with shrimp inside and a lighter texture.",
+      es: "En Tainan el ba-wan se hace al vapor, no frito como en el norte; lleva gambas dentro y es más ligero.",
+    },
+    mapQuery: "鮮蒸蝦仁肉圓 台南",
+    michelinBib: 2026,
+  },
+  {
+    id: "a-xing-congee",
+    category: "food",
+    region: "tainan",
+    name: { "zh-TW": "阿星鹹粥", en: "A Xing Savory Congee", es: "A Xing Savory Congee" },
+    description: {
+      "zh-TW": "台南人的早餐之一：鹹粥裡有虱目魚和海鮮，湯頭鮮甜。適合早起去吃。",
+      en: "A Tainan breakfast staple: savoury congee with milkfish and seafood in a sweet, fresh broth. Go early in the morning.",
+      es: "Un desayuno típico de Tainan: gachas saladas de arroz con pez de leche y marisco en un caldo suave. Ve temprano por la mañana.",
+    },
+    mapQuery: "阿星鹹粥 台南",
+    michelinBib: 2026,
+  },
+  {
+    id: "a-mei-restaurant",
+    category: "food",
+    region: "tainan",
+    name: { "zh-TW": "阿美飯店", en: "A Mei Restaurant", es: "A Mei Restaurant" },
+    description: {
+      "zh-TW": "台南的台菜餐廳，適合一群人一起點好幾道菜分享，坐下來好好吃一頓。",
+      en: "A Taiwanese restaurant in Tainan, good for a group sharing several dishes over a proper sit-down meal.",
+      es: "Un restaurante de cocina taiwanesa en Tainan, ideal para ir en grupo y compartir varios platos con calma.",
+    },
+    mapQuery: "阿美飯店 台南",
+    michelinBib: 2026,
+  },
+
+  // 我的私房推薦
+  {
+    id: "ye-feng-milkfish-soup",
+    category: "food",
+    region: "tainan",
+    name: { "zh-TW": "葉鳳浮水魚羹", en: "Ye Feng Milkfish Thick Soup", es: "Ye Feng Milkfish Thick Soup" },
+    description: {
+      "zh-TW": "保安路上的浮水魚羹，是老店阿鳳的第二代。虱目魚漿包著魚肉，浮在清甜的羹湯上，是台南很道地的小吃。",
+      en: "Fish-ball thick soup on Bao'an Road, run by the second generation of the well-known A Feng. Milkfish paste wrapped around chunks of fish, floating in a light, sweet broth: a true Tainan snack.",
+      es: "Sopa espesa con bolas de pescado en la calle Bao'an, llevada por la segunda generación del conocido A Feng. Pasta de pez de leche envolviendo trozos de pescado, flotando en un caldo suave y dulce: un bocado muy de Tainan.",
+    },
+    mapQuery: "葉鳳浮水虱目魚羹 保安路 台南",
+    localPick: true,
+  },
+  {
+    id: "khuntor",
+    category: "food",
+    region: "tainan",
+    name: { "zh-TW": "鯤島 Khuntor", en: "Khuntor", es: "Khuntor" },
+    description: {
+      "zh-TW": "台南北區的餐酒館，把台南在地食材做進西式料理和調酒裡，例如用柳營牛奶、麻豆碗粿調的酒。晚上想坐下來喝一杯很適合。",
+      en: "A bistro and bar in Tainan's North District that works local ingredients into Western dishes and cocktails, such as drinks inspired by Liuying milk and Madou rice cakes. Great for an evening drink.",
+      es: "Un bistró y bar en el distrito Norte de Tainan que lleva ingredientes locales a platos occidentales y cócteles, como bebidas inspiradas en la leche de Liuying y los pasteles de arroz de Madou. Perfecto para tomar algo por la noche.",
+    },
+    mapQuery: "鯤島 Khuntor 台南 北區",
+    localPick: true,
   },
 
   // --- 高雄 ---

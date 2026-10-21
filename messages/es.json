@@ -26,6 +26,15 @@
     "openMap": "Abrir en Google Maps",
     "michelinBib": "MICHELIN Bib Gourmand",
     "notice": "Atención:",
-    "photo": "Foto"
+    "photo": "Foto",
+    "back": "Volver a todos los lugares",
+    "moreInRegion": "Más en esta región",
+    "localPick": "Favorito local"
+  },
+  "filter": {
+    "all": "Todos",
+    "type": "Tipo",
+    "region": "Región",
+    "empty": "Ningún lugar coincide con estos filtros. Prueba otra combinación."
   }
 }

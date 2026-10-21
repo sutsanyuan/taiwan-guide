@@ -5,18 +5,24 @@ import { places } from "@/data/places";
 // 用 Record<Locale, string>：少寫任何一個語言，TypeScript 就會報錯
 export type Localized = Record<Locale, string>;
 
-export type Category = "sight" | "food";
+// 類型和地區都用「陣列＋as const」定義，跟 config.ts 的語言清單同一招：
+// 陣列的順序就是篩選按鈕的順序，型別也從陣列自動推導
+export const categories = ["sight", "food"] as const;
+export type Category = (typeof categories)[number]; // "sight" | "food"
 
-export type Region =
-  | "taipei"
-  | "new-taipei"
-  | "hsinchu"
-  | "taichung"
-  | "nantou"
-  | "chiayi"
-  | "tainan"
-  | "kaohsiung"
-  | "hualien";
+// 由北到南、最後東部
+export const regions = [
+  "taipei",
+  "new-taipei",
+  "hsinchu",
+  "taichung",
+  "nantou",
+  "chiayi",
+  "tainan",
+  "kaohsiung",
+  "hualien",
+] as const;
+export type Region = (typeof regions)[number];
 
 // 外部圖片（Wikimedia Commons）。CC 授權規定要標示作者、授權和出處
 export type PlaceImage = {
@@ -35,6 +41,7 @@ export type Place = {
   description: Localized;
   mapQuery: string; // 丟給 Google 地圖搜尋的字，用中文店名＋城市最準
   michelinBib?: number; // 有入選米其林必比登的話，寫最近確認的年份
+  localPick?: boolean; // 我自己的私房推薦（不是米其林名單上的）
   notice?: Localized; // 需要特別提醒的事，例如部分封閉
   image?: PlaceImage; // 選填：卡片縮圖
 };

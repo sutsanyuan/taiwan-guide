@@ -1,7 +1,8 @@
-import Image from "next/image";
+import Link from "next/link";
 import type { Locale } from "@/lib/i18n/config";
 import type { TFunction } from "@/lib/i18n/t";
 import { mapsUrl, type Place } from "@/lib/places";
+import PlacePhoto from "@/components/PlacePhoto";
 
 type Props = {
   place: Place;
@@ -13,30 +14,16 @@ export default function PlaceCard({ place, lang, t }: Props) {
   const { image } = place;
 
   return (
-    <article className="flex flex-col overflow-hidden rounded-xl border border-foreground/15">
+    <article className="flex w-full flex-col overflow-hidden rounded-xl border border-foreground/15">
       {/* 縮圖：有 image 才顯示（目前景點有、餐廳沒有） */}
       {image && (
-        <figure className="relative aspect-[16/10]">
-          <Image
-            src={image.src}
-            alt={place.name[lang]}
-            fill // 填滿外層的 16:10 方框
-            // 告訴瀏覽器卡片在各種螢幕上大約多寬，Next.js 會挑剛好的尺寸，不會下載過大的圖
-            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-            className="object-cover"
-          />
-          {/* CC 授權規定：標示作者、授權和出處 */}
-          <figcaption className="absolute right-0 bottom-0 rounded-tl-md bg-black/55 px-2 py-0.5 text-[10px] text-white">
-            {t("place.photo")}:{" "}
-            <a href={image.sourceUrl} target="_blank" rel="noopener noreferrer" className="underline">
-              {image.credit}
-            </a>{" "}
-            ·{" "}
-            <a href={image.licenseUrl} target="_blank" rel="noopener noreferrer" className="underline">
-              {image.license}
-            </a>
-          </figcaption>
-        </figure>
+        <PlacePhoto
+          image={image}
+          alt={place.name[lang]}
+          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+          t={t}
+          className="aspect-[16/10]"
+        />
       )}
 
       <div className="flex flex-1 flex-col gap-3 p-5">
@@ -50,10 +37,20 @@ export default function PlaceCard({ place, lang, t }: Props) {
               {t("place.michelinBib")} {place.michelinBib}
             </span>
           )}
+          {place.localPick && (
+            <span className="rounded-full bg-emerald-600/10 px-2 py-0.5 text-emerald-700 dark:text-emerald-400">
+              {t("place.localPick")}
+            </span>
+          )}
         </div>
 
         {/* 內容：用 lang 從 { "zh-TW": ..., en: ..., es: ... } 裡挑出目前語言 */}
-        <h3 className="font-display text-base font-bold">{place.name[lang]}</h3>
+        {/* 名稱連到這個地點的詳細頁，例如 /zh-TW/places/anping-tree-house */}
+        <h3 className="font-display text-base font-bold">
+          <Link href={`/${lang}/places/${place.id}`} className="hover:underline underline-offset-4">
+            {place.name[lang]}
+          </Link>
+        </h3>
         <p className="text-sm leading-relaxed opacity-80">{place.description[lang]}</p>
 
         {place.notice && (
