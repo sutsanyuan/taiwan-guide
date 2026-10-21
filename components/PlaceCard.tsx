@@ -24,7 +24,7 @@ export default function PlaceCard({ place, lang, t }: Props) {
       </div>
 
       {/* 內容：用 lang 從 { "zh-TW": ..., en: ... } 裡挑出目前語言 */}
-      <h3 className="text-lg font-semibold">{place.name[lang]}</h3>
+      <h3 className="font-display text-base font-bold">{place.name[lang]}</h3>
       <p className="text-sm leading-relaxed opacity-80">{place.description[lang]}</p>
 
       {place.notice && (

@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# LINE Seed 原始字體檔（已切片放在 public/fonts，原檔不需要進 git）
+/LINE Seed TW_ver02/

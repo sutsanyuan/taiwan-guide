@@ -15,7 +15,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
 
   return (
     <main className="mx-auto w-full max-w-5xl px-4 pb-16">
-      <h1 className="text-3xl font-bold">{t("home.title")}</h1>
+      <h1 className="font-display text-3xl font-extrabold">{t("home.title")}</h1>
       <p className="mt-2 opacity-70">{t("home.subtitle")}</p>
 
       {sections.map((category) => {

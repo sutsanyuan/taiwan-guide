@@ -8,8 +8,10 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* 字體順序很重要：西文字體在前，遇到中文字（西文字體沒有）才往後找 LINE Seed TW，
+     LINE Seed 也沒有的字，再交給思源黑體或系統字體 */
+  --font-sans: var(--font-manrope), "LINE Seed TW", "Noto Sans TC", sans-serif;
+  --font-display: var(--font-krona), "LINE Seed TW", "Noto Sans TC", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +24,11 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+/* Krona One 只有一種粗細。禁止瀏覽器把它「假加粗」，
+   這樣標題可以設粗體：西文維持 Krona One 原樣，中文則用 LINE Seed 的真粗體 */
+.font-display {
+  font-synthesis-weight: none;
 }
