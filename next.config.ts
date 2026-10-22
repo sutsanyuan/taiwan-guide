@@ -3,6 +3,7 @@ import { defaultLocale } from "./lib/i18n/config";
 
 const nextConfig: NextConfig = {
   /* config options here */
+  allowedDevOrigins: ["192.168.73.212"],
 
   // 打開 / 時，自動導向預設語言 /zh-TW
   async redirects() {
