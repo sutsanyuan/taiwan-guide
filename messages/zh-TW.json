@@ -9,7 +9,9 @@
   },
   "categories": {
     "sight": "景點",
-    "food": "餐廳"
+    "food": "餐廳",
+    "cafe": "咖啡・飲料",
+    "shop": "購物"
   },
   "regions": {
     "taipei": "台北",

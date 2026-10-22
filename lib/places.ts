@@ -7,8 +7,8 @@ export type Localized = Record<Locale, string>;
 
 // 類型和地區都用「陣列＋as const」定義，跟 config.ts 的語言清單同一招：
 // 陣列的順序就是篩選按鈕的順序，型別也從陣列自動推導
-export const categories = ["sight", "food"] as const;
-export type Category = (typeof categories)[number]; // "sight" | "food"
+export const categories = ["sight", "food", "cafe", "shop"] as const;
+export type Category = (typeof categories)[number]; // "sight" | "food" | "cafe" | "shop"
 
 // 由北到南、最後東部
 export const regions = [
