@@ -33,6 +33,9 @@ export type PlaceImage = {
   sourceUrl: string; // 圖片在 Commons 的原始頁面
 };
 
+// 經緯度：地圖標記的位置
+export type PlaceLocation = { lat: number; lng: number };
+
 export type Place = {
   id: string; // 網址用的代號，只用小寫英文和 -，例如 "anping-old-fort"
   category: Category;
@@ -40,6 +43,7 @@ export type Place = {
   name: Localized;
   description: Localized;
   mapQuery: string; // 丟給 Google 地圖搜尋的字，用中文店名＋城市最準
+  location: PlaceLocation; // 地圖上的位置（必填，少了會標紅）
   michelinBib?: number; // 有入選米其林必比登的話，寫最近確認的年份
   localPick?: boolean; // 我自己的私房推薦（不是米其林名單上的）
   notice?: Localized; // 需要特別提醒的事，例如部分封閉

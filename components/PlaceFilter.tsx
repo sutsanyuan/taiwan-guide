@@ -1,14 +1,18 @@
 "use client"; // 篩選要記住「使用者點了哪個按鈕」，這種會變動的狀態只能在瀏覽器裡
 
 import { useState, type ReactNode } from "react";
-import { categories, regions, type Category, type Region } from "@/lib/places";
+import { categories, regions, type Category, type PlaceLocation, type Region } from "@/lib/places";
+import PlaceMap from "@/components/PlaceMap";
 
 // 每一筆資料：篩選需要的欄位＋伺服器已經畫好的卡片
 export type FilterItem = {
   id: string;
   category: Category;
   region: Region;
-  card: ReactNode;
+  name: string; // 地圖標記上的名字（給螢幕閱讀器和滑鼠提示）
+  location: PlaceLocation; // 地圖標記的位置
+  card: ReactNode; // 列表裡的完整卡片
+  mapCard: ReactNode; // 點地圖標記時，浮在地圖上的精簡卡片
 };
 
 type Props = {
@@ -20,6 +24,7 @@ type Props = {
     empty: string;
     categories: Record<Category, string>;
     regions: Record<Region, string>;
+    map: { map: string; locateMe: string; locating: string; locationError: string; close: string };
   };
 };
 
@@ -27,12 +32,16 @@ export default function PlaceFilter({ items, labels }: Props) {
   // useState：記住目前選了什麼，預設都是「全部」
   const [category, setCategory] = useState<Category | "all">("all");
   const [region, setRegion] = useState<Region | "all">("all");
+  // 地圖上點了哪個標記（null = 還沒點）
+  const [selectedId, setSelectedId] = useState<string | null>(null);
 
   // 符合條件的才留下來
   const matches = (item: FilterItem) =>
     (category === "all" || item.category === category) &&
     (region === "all" || item.region === region);
   const visible = items.filter(matches);
+  // 選中的地點如果被篩選掉了，就當作沒選
+  const selected = visible.find((item) => item.id === selectedId) ?? null;
 
   // 每個地區在「目前類型」下有幾筆，顯示在按鈕上；0 筆的按鈕就停用
   const regionCount = (r: Region) =>
@@ -69,6 +78,15 @@ export default function PlaceFilter({ items, labels }: Props) {
           })}
         </ChipGroup>
       </div>
+
+      {/* 地圖：只顯示篩選後的地點；點標記，地圖底部浮出精簡卡片 */}
+      <PlaceMap
+        points={visible}
+        selectedId={selected?.id ?? null}
+        selectedCard={selected?.mapCard}
+        onSelect={setSelectedId}
+        labels={labels.map}
+      />
 
       {/* 結果：照類型分區，沒有東西的區塊就不顯示 */}
       {visible.length === 0 && <p className="opacity-70">{labels.empty}</p>}

@@ -4,6 +4,7 @@ import { getT } from "@/lib/i18n/t";
 import { categories, places, regions } from "@/lib/places";
 import PlaceCard from "@/components/PlaceCard";
 import PlaceFilter from "@/components/PlaceFilter";
+import PlaceMapCard from "@/components/PlaceMapCard";
 
 export default async function Home({ params }: PageProps<"/[lang]">) {
   const { lang } = await params;
@@ -17,7 +18,10 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
     id: place.id,
     category: place.category,
     region: place.region,
+    name: place.name[lang],
+    location: place.location,
     card: <PlaceCard place={place} lang={lang} t={t} />,
+    mapCard: <PlaceMapCard place={place} lang={lang} t={t} />,
   }));
 
   // 篩選按鈕上的文字，一樣在伺服器上查好再傳進去
@@ -28,6 +32,13 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
     empty: t("filter.empty"),
     categories: labelMap(categories, (c) => t(`categories.${c}`)),
     regions: labelMap(regions, (r) => t(`regions.${r}`)),
+    map: {
+      map: t("map.label"),
+      locateMe: t("map.locateMe"),
+      locating: t("map.locating"),
+      locationError: t("map.locationError"),
+      close: t("map.close"),
+    },
   };
 
   return (

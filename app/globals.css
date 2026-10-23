@@ -32,3 +32,60 @@ body {
 .font-display {
   font-synthesis-weight: none;
 }
+
+/* 地圖標記（Figma「Pin 地標」）：一般是灰色，選中變深色並放大 */
+.place-pin {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  color: #8a8e96;
+  filter: drop-shadow(0 1px 1.5px rgb(0 0 0 / 0.3));
+  transition: color 0.15s;
+}
+.place-pin svg {
+  display: block;
+  transform-origin: 50% 100%;
+  transition: transform 0.15s;
+}
+.place-pin:hover {
+  color: #33363f;
+}
+.place-pin[data-selected="true"] {
+  color: #171717;
+}
+.place-pin[data-selected="true"] svg {
+  transform: scale(1.3);
+}
+.place-pin:focus-visible {
+  outline: 2px solid #171717;
+  outline-offset: 2px;
+  border-radius: 50%;
+}
+
+/* 「我的位置」藍點 */
+.user-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #2563eb;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 6px rgb(37 99 235 / 0.25);
+}
+
+/* 地圖上的精簡卡片：從下方滑入 */
+@keyframes map-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+.map-card-in {
+  animation: map-card-in 0.2s ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .map-card-in {
+    animation: none;
+  }
+}

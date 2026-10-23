@@ -38,5 +38,12 @@
     "type": "Type",
     "region": "Region",
     "empty": "No places match these filters. Try a different combination."
+  },
+  "map": {
+    "label": "Map",
+    "locateMe": "Show my location",
+    "locating": "Locating…",
+    "locationError": "Couldn't get your location. Check that location access is allowed in your browser.",
+    "close": "Close"
   }
 }

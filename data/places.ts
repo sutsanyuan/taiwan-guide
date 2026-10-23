@@ -4,6 +4,7 @@ import type { Place } from "@/lib/places";
 // 景點和餐廳資料：要新增、修改、刪除，直接改這個檔案就好。
 //
 // 新增一筆時，複製任何一個 { ... } 區塊改內容。
+// location 是地圖上的位置：在 Google 地圖打開那個地點，網址裡 !3d 後面是緯度（lat）、!4d 後面是經度（lng）。
 // 每段文字都要有 "zh-TW"、en、es 三種語言（西語為初稿，建議請懂西語的人看過）。
 // 少填了必填欄位、或少寫了某個語言，編輯器會標紅提醒你。
 //
@@ -27,6 +28,7 @@ export const places: Place[] = [
       es: "Alberga una enorme colección de tesoros imperiales chinos; la Col de Jade y la Piedra con Forma de Carne son las piezas estrella. Reserva al menos media jornada.",
     },
     mapQuery: "國立故宮博物院 台北",
+    location: { lat: 25.1023554, lng: 121.5484925 },
     image: {
       src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/National_Palace_Museum%2C_Taipei.jpg/1280px-National_Palace_Museum%2C_Taipei.jpg",
       credit: "Jason Zhang",
@@ -46,6 +48,7 @@ export const places: Place[] = [
       es: "Un antiguo muelle a orillas del río Tamsui, precioso al atardecer. Muy cerca, la calle Dihua está llena de tiendas antiguas de productos secos y té.",
     },
     mapQuery: "大稻埕碼頭 台北",
+    location: { lat: 25.0565813, lng: 121.5074693 },
     image: {
       src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Skyline_view_from_Dadaocheng_Wharf_20090418.jpg/1280px-Skyline_view_from_Dadaocheng_Wharf_20090418.jpg",
       credit: "黃 zero",
@@ -65,6 +68,7 @@ export const places: Place[] = [
       es: "Uno de los templos más conocidos de Taipéi, fundado en la dinastía Qing. Un buen lugar para ver cómo reza la gente local en su día a día.",
     },
     mapQuery: "艋舺龍山寺 台北",
+    location: { lat: 25.0373106, lng: 121.4998654 },
     image: {
       src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Longshan_Temple%2C_Taipei_01.jpg/1280px-Longshan_Temple%2C_Taipei_01.jpg",
       credit: "Bernard Gagnon",
@@ -84,6 +88,7 @@ export const places: Place[] = [
       es: "Un sendero corto junto a la ciudad. Tras 20–30 minutos de subida tienes vistas de Taipei 101 y de toda la ciudad.",
     },
     mapQuery: "象山步道 台北",
+    location: { lat: 25.025249, lng: 121.5792578 },
     image: {
       src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/20190418_Elephant_Mountain_view-4.jpg/1280px-20190418_Elephant_Mountain_view-4.jpg",
       credit: "Balon Greyjoy",
@@ -105,6 +110,7 @@ export const places: Place[] = [
       es: "Un pueblo en la ladera con callejuelas, faroles rojos y casas de té; tiene más encanto al anochecer, cuando se encienden las luces. Los fines de semana se llena, así que mejor ir entre semana.",
     },
     mapQuery: "九份老街 新北",
+    location: { lat: 25.1100691, lng: 121.845646 },
     image: {
       src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Jiufen_at_night_lantern_glow.jpg/1280px-Jiufen_at_night_lantern_glow.jpg",
       credit: "Sunkenbean",
@@ -126,6 +132,7 @@ export const places: Place[] = [
       es: "El lago natural más grande de Taiwán. Puedes cruzarlo en barco, recorrer la orilla en bici o subir al teleférico para ver el lago desde arriba.",
     },
     mapQuery: "日月潭 南投",
+    location: { lat: 23.8573342, lng: 120.9159131 },
     image: {
       src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/%E6%97%A5%E6%9C%88%E6%BD%AD%E6%B0%B4%E7%A4%BE%E7%A2%BC%E9%A0%AD_View_of_Shuishe_Pier_from_Sun_Moon_Lake_20151213.jpg/1280px-%E6%97%A5%E6%9C%88%E6%BD%AD%E6%B0%B4%E7%A4%BE%E7%A2%BC%E9%A0%AD_View_of_Shuishe_Pier_from_Sun_Moon_Lake_20151213.jpg",
       credit: "LowensteinYang",
@@ -147,6 +154,7 @@ export const places: Place[] = [
       es: "Una zona de bosque de montaña con un tren forestal histórico y senderos entre árboles gigantes, famosa por su amanecer sobre un mar de nubes.",
     },
     mapQuery: "阿里山國家森林遊樂區",
+    location: { lat: 23.509598, lng: 120.802298 },
     image: {
       src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Alishan_Taiwan_Alishan-Forest-Railway-02.jpg/1280px-Alishan_Taiwan_Alishan-Forest-Railway-02.jpg",
       credit: "CEphoto, Uwe Aranas",
@@ -168,6 +176,7 @@ export const places: Place[] = [
       es: "Originalmente el Fuerte Provintia, construido por los holandeses en 1653 y reconstruido después como pabellones de estilo chino. Un buen punto de partida para conocer la historia de Tainan.",
     },
     mapQuery: "赤崁樓 台南",
+    location: { lat: 22.997478, lng: 120.2025433 },
     image: {
       src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Tainan_Taiwan_Fort-Provintia-01.jpg/1280px-Tainan_Taiwan_Fort-Provintia-01.jpg",
       credit: "CEphoto, Uwe Aranas",
@@ -187,6 +196,7 @@ export const places: Place[] = [
       es: "Los restos del Fuerte Zeelandia, construido por los holandeses en 1624 y una de las fortificaciones más antiguas de Taiwán. Sube a la torre mirador para ver Anping.",
     },
     mapQuery: "安平古堡 台南",
+    location: { lat: 23.0015093, lng: 120.1606244 },
     image: {
       src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Tainan_Taiwan_Fort-Zeelandia-01.jpg/1280px-Tainan_Taiwan_Fort-Zeelandia-01.jpg",
       credit: "CEphoto, Uwe Aranas",
@@ -206,6 +216,7 @@ export const places: Place[] = [
       es: "Un antiguo almacén de la compañía comercial británica Tait & Co., hoy completamente envuelto por raíces de baniano, como si la naturaleza hubiera recuperado el edificio.",
     },
     mapQuery: "安平樹屋 台南",
+    location: { lat: 23.0038453, lng: 120.1598012 },
     image: {
       src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Anping_Tree_House%2C_Tainan_%28Taiwan%29.jpg/1280px-Anping_Tree_House%2C_Tainan_%28Taiwan%29.jpg",
       credit: "Mk2010",
@@ -225,6 +236,7 @@ export const places: Place[] = [
       es: "Construido en 1665, es el primer templo confuciano de Taiwán y se le conoce como la primera escuela de la isla. Sus muros rojos y árboles centenarios invitan a pasear sin prisa.",
     },
     mapQuery: "臺南孔廟",
+    location: { lat: 22.9905296, lng: 120.2040401 },
     image: {
       src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Exterior_of_Tainan_Confucius_Temple_in_November_2017.jpg/1280px-Exterior_of_Tainan_Confucius_Temple_in_November_2017.jpg",
       credit: "Nick-D",
@@ -244,6 +256,7 @@ export const places: Place[] = [
       es: "Una calle de la época Qing con casas tienda antiguas, hoy llena de tiendas pequeñas, cafés y bares. Está más bonita de noche, con los faroles encendidos.",
     },
     mapQuery: "神農街 台南",
+    location: { lat: 22.9975171, lng: 120.1964949 },
     image: {
       src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Tainan_Shennong_St_1.jpg/1280px-Tainan_Shennong_St_1.jpg",
       credit: "Andrzej Otrębski",
@@ -263,6 +276,7 @@ export const places: Place[] = [
       es: "Unos grandes almacenes de la época japonesa, inaugurados en 1932. Hoy venden productos de diseño de Tainan, y en la azotea se conservan el antiguo santuario sintoísta y marcas de balas de la guerra.",
     },
     mapQuery: "林百貨 台南",
+    location: { lat: 22.9917925, lng: 120.2025232 },
     image: {
       src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Hayashi_Department_Store_in_Tainan%2C_Taiwan_%28%E6%9E%97%E7%99%BE%E8%B2%A8%EF%BC%89.jpg/1280px-Hayashi_Department_Store_in_Tainan%2C_Taiwan_%28%E6%9E%97%E7%99%BE%E8%B2%A8%EF%BC%89.jpg",
       credit: "Lchung9779",
@@ -282,6 +296,7 @@ export const places: Place[] = [
       es: "Un museo privado en un edificio de estilo palacio europeo, con arte occidental, instrumentos musicales y armas. Su colección de violines es famosa en todo el mundo.",
     },
     mapQuery: "奇美博物館 台南",
+    location: { lat: 22.9345608, lng: 120.2260268 },
     image: {
       src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Chimei_Museum_20190210_%28cropped%29.jpg/1280px-Chimei_Museum_20190210_%28cropped%29.jpg",
       credit: "Deon",
@@ -303,6 +318,7 @@ export const places: Place[] = [
       es: "Antiguos almacenes del puerto convertidos en un barrio artístico con exposiciones, arte público y tiendas. Alquila una bici y recorre el paseo marítimo.",
     },
     mapQuery: "駁二藝術特區 高雄",
+    location: { lat: 22.6197216, lng: 120.281876 },
     image: {
       src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/202407_Penglai_warehouses%2C_Pier-2_Art_Center%2C_Kaohsiung.jpg/1280px-202407_Penglai_warehouses%2C_Pier-2_Art_Center%2C_Kaohsiung.jpg",
       credit: "Jonashtand",
@@ -322,6 +338,7 @@ export const places: Place[] = [
       es: "Las Pagodas del Dragón y el Tigre sobre el lago son un símbolo de Kaohsiung. Según la tradición, entrar por la boca del dragón y salir por la del tigre convierte la mala suerte en buena.",
     },
     mapQuery: "蓮池潭龍虎塔 高雄",
+    location: { lat: 22.6805033, lng: 120.2924777 },
     image: {
       src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Kaohsiung_Taiwan_Dragon-and-Tiger-Pagodas-01.jpg/1280px-Kaohsiung_Taiwan_Dragon-and-Tiger-Pagodas-01.jpg",
       credit: "CEphoto, Uwe Aranas",
@@ -343,6 +360,7 @@ export const places: Place[] = [
       es: "Un desfiladero de mármol con acantilados y valles impresionantes, además de los famosos acantilados de Qingshui que caen al mar.",
     },
     mapQuery: "太魯閣國家公園遊客中心",
+    location: { lat: 24.1583942, lng: 121.6219933 },
     image: {
       src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Taroko-Gorge_Hualien_Taiwan_Cihmu-Bridge-at-Taroko-National-Park-01.jpg/1280px-Taroko-Gorge_Hualien_Taiwan_Cihmu-Bridge-at-Taroko-National-Park-01.jpg",
       credit: "CEphoto, Uwe Aranas",
@@ -371,6 +389,7 @@ export const places: Place[] = [
       es: "Un local de salteados taiwaneses: pide muchos platos para compartir en grupo con unas cervezas, como sale a cenar la gente de aquí. Nuevo en la lista en 2026.",
     },
     mapQuery: "有有1969 台北",
+    location: { lat: 25.0489746, lng: 121.5420743 },
     michelinBib: 2026,
   },
   {
@@ -384,6 +403,7 @@ export const places: Place[] = [
       es: "Conocido por su cerdo guisado al estilo taiwanés. Nuevo en la lista en 2026.",
     },
     mapQuery: "開囍 台北",
+    location: { lat: 25.0271504, lng: 121.5671244 },
     michelinBib: 2026,
   },
   {
@@ -397,6 +417,7 @@ export const places: Place[] = [
       es: "Cocina vegetariana al estilo de Sichuan: sabores intensos y picantes para quienes no comen carne.",
     },
     mapQuery: "祥和蔬食 中正 台北",
+    location: { lat: 25.0443616, lng: 121.5217918 },
     michelinBib: 2026,
   },
 
@@ -412,6 +433,7 @@ export const places: Place[] = [
       es: "Famoso por su ganso ahumado y nuevo en la lista en 2026. Está cerca de Bitan, en Xindian, así que después puedes pasear por el puente colgante.",
     },
     mapQuery: "碧潭橋頭鵝肉 新店",
+    location: { lat: 24.9628174, lng: 121.5394467 },
     michelinBib: 2026,
   },
   {
@@ -424,7 +446,8 @@ export const places: Place[] = [
       en: "Beef noodle soup is Taiwan's national comfort food, and this is one of New Taipei's Bib Gourmand picks.",
       es: "La sopa de fideos con ternera es el plato reconfortante nacional de Taiwán, y este es uno de los Bib Gourmand de Nuevo Taipéi.",
     },
-    mapQuery: "蔡家牛肉麵 新北",
+    mapQuery: "蔡家牛肉麵 中和 秀朗路",
+    location: { lat: 24.9915596, lng: 121.5255837 },
     michelinBib: 2026,
   },
 
@@ -440,6 +463,7 @@ export const places: Place[] = [
       es: "Bollos salados hakka hechos con una masa de harina de arroz elástica, en el antiguo pueblo hakka de Beipu. Combínalo con un paseo por su calle vieja.",
     },
     mapQuery: "鄒記菜包 北埔 中正路",
+    location: { lat: 24.700611, lng: 121.055987 },
     michelinBib: 2026,
   },
 
@@ -455,6 +479,7 @@ export const places: Place[] = [
       es: "Un restaurante de cocina taiwanesa en el distrito Central de Taichung, recomendado en la lista Bib Gourmand.",
     },
     mapQuery: "范記金之園 台中 中區",
+    location: { lat: 24.1413509, lng: 120.6824544 },
     michelinBib: 2026,
   },
 
@@ -470,6 +495,7 @@ export const places: Place[] = [
       es: "El pez de leche es un desayuno clásico en Tainan; la sopa de vientre de pescado y la piel de pescado son las favoritas. Ve temprano.",
     },
     mapQuery: "阿興虱目魚 台南",
+    location: { lat: 23.0065447, lng: 120.1934371 },
     michelinBib: 2026,
   },
   {
@@ -483,6 +509,7 @@ export const places: Place[] = [
       es: "Pato salteado al estilo de Tainan en una sopa espesa agridulce, servida con fideos o fideos de arroz.",
     },
     mapQuery: "葉桑生炒鴨肉焿 台南",
+    location: { lat: 22.9902835, lng: 120.2245482 },
     michelinBib: 2026,
   },
   {
@@ -496,6 +523,7 @@ export const places: Place[] = [
       es: "Un pequeño local centrado en la sopa de pescado, nuevo en la lista en 2026.",
     },
     mapQuery: "詹記 魚湯 台南",
+    location: { lat: 22.992299, lng: 120.2262442 },
     michelinBib: 2026,
   },
   {
@@ -509,6 +537,7 @@ export const places: Place[] = [
       es: "Una «mesa de arroz» de Tainan: señala los platos caseros del mostrador y monta tu propia comida, como en una cena familiar de aquí.",
     },
     mapQuery: "福泰飯桌第三代 台南",
+    location: { lat: 22.9957939, lng: 120.2050935 },
     michelinBib: 2026,
   },
   {
@@ -522,6 +551,7 @@ export const places: Place[] = [
       es: "La sopa de ternera de Tainan usa carne fresca, nunca congelada, cortada fina y cocinada con el caldo caliente que se vierte encima. Un desayuno muy local.",
     },
     mapQuery: "尚好吃牛肉湯 台南",
+    location: { lat: 23.0152087, lng: 120.2126318 },
     michelinBib: 2026,
   },
   {
@@ -535,6 +565,7 @@ export const places: Place[] = [
       es: "El migao, un clásico de Tainan: arroz glutinoso con cerdo guisado y hebras de pescado por encima. Las raciones son pequeñas, así que puedes probar varios sitios en un paseo.",
     },
     mapQuery: "落成米糕 台南",
+    location: { lat: 22.9959727, lng: 120.2046874 },
     michelinBib: 2026,
   },
   {
@@ -548,6 +579,7 @@ export const places: Place[] = [
       es: "Hielo raspado tradicional y postres de bolitas de arroz, perfectos después de una ronda de platos salados.",
     },
     mapQuery: "八寶彬圓仔惠 國華街 台南",
+    location: { lat: 22.9904526, lng: 120.1966777 },
     michelinBib: 2026,
   },
 
@@ -563,6 +595,7 @@ export const places: Place[] = [
       es: "Los fideos danzai son el plato más emblemático de Tainan: un cuenco pequeño de fideos en caldo con cerdo picado guisado y una gamba. Imprescindibles en tu primera visita.",
     },
     mapQuery: "小公園擔仔麵 台南",
+    location: { lat: 22.9971649, lng: 120.1996052 },
     michelinBib: 2026,
   },
   {
@@ -576,6 +609,7 @@ export const places: Place[] = [
       es: "Rollitos de gamba fritos y crujientes, uno de los aperitivos clásicos de Tainan, fáciles de comer mientras paseas.",
     },
     mapQuery: "黃家蝦捲 台南",
+    location: { lat: 23.0027467, lng: 120.1925975 },
     michelinBib: 2026,
   },
   {
@@ -589,6 +623,7 @@ export const places: Place[] = [
       es: "Trozos de caballa frita en una sopa espesa agridulce, con fideos de arroz o de trigo. Un sabor que todo el mundo en Tainan conoce.",
     },
     mapQuery: "開元紅燒土魠魚羮 台南",
+    location: { lat: 23.0080994, lng: 120.2214137 },
     michelinBib: 2026,
   },
   {
@@ -602,6 +637,7 @@ export const places: Place[] = [
       es: "En Tainan el ba-wan se hace al vapor, no frito como en el norte; lleva gambas dentro y es más ligero.",
     },
     mapQuery: "鮮蒸蝦仁肉圓 台南",
+    location: { lat: 22.9887509, lng: 120.2352251 },
     michelinBib: 2026,
   },
   {
@@ -615,6 +651,7 @@ export const places: Place[] = [
       es: "Un desayuno típico de Tainan: gachas saladas de arroz con pez de leche y marisco en un caldo suave. Ve temprano por la mañana.",
     },
     mapQuery: "阿星鹹粥 台南",
+    location: { lat: 23.0000073, lng: 120.1922409 },
     michelinBib: 2026,
   },
   {
@@ -628,6 +665,7 @@ export const places: Place[] = [
       es: "Un restaurante de cocina taiwanesa en Tainan, ideal para ir en grupo y compartir varios platos con calma.",
     },
     mapQuery: "阿美飯店 台南",
+    location: { lat: 22.9947456, lng: 120.2041059 },
     michelinBib: 2026,
   },
 
@@ -643,6 +681,7 @@ export const places: Place[] = [
       es: "Sopa espesa con bolas de pescado en la calle Bao'an, llevada por la segunda generación del conocido A Feng. Pasta de pez de leche envolviendo trozos de pescado, flotando en un caldo suave y dulce: un bocado muy de Tainan.",
     },
     mapQuery: "葉鳳浮水虱目魚羹 保安路 台南",
+    location: { lat: 22.9903222, lng: 120.1960065 },
     localPick: true,
   },
   {
@@ -656,6 +695,7 @@ export const places: Place[] = [
       es: "Un bistró y bar en el distrito Norte de Tainan que lleva ingredientes locales a platos occidentales y cócteles, como bebidas inspiradas en la leche de Liuying y los pasteles de arroz de Madou. Perfecto para tomar algo por la noche.",
     },
     mapQuery: "鯤島 Khuntor 台南 北區",
+    location: { lat: 23.0031189, lng: 120.2218767 },
     localPick: true,
   },
 
@@ -670,6 +710,7 @@ export const places: Place[] = [
       es: "El primer templo dedicado oficialmente a Matsu, la diosa del mar, en la antigua residencia de un príncipe de la dinastía Ming.",
     },
     mapQuery: "臺南祀典大天后宮",
+    location: { lat: 22.9966464, lng: 120.2015605 },
     image: {
       src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/2017-08-08_Tainan_Grand_Matsu_Temple.jpg/1280px-2017-08-08_Tainan_Grand_Matsu_Temple.jpg",
       credit: "Felix Filnkoessl",
@@ -690,6 +731,7 @@ export const places: Place[] = [
       es: "Antes era un viejo centro comercial; ahora es una plaza junto al agua donde la gente se refresca en los días de calor. Ideal para pasear al atardecer.",
     },
     mapQuery: "河樂廣場 台南",
+    location: { lat: 22.9936595, lng: 120.1940493 },
     image: {
       src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/%E8%87%BA%E5%8D%97%E6%B2%B3%E6%A8%82%E5%BB%A3%E5%A0%B4.jpg/1280px-%E8%87%BA%E5%8D%97%E6%B2%B3%E6%A8%82%E5%BB%A3%E5%A0%B4.jpg",
       credit: "Pbdragonwang",
@@ -710,6 +752,7 @@ export const places: Place[] = [
       es: "Un conjunto de puestos pequeños dentro de un mercado público, con objetos de diseño, artesanía y comida. Para pasear sin prisa.",
     },
     mapQuery: "西門淺草公有零售市場 淺草新天地 台南",
+    location: { lat: 22.9935115, lng: 120.1979673 },
     localPick: true,
   },
   {
@@ -723,6 +766,7 @@ export const places: Place[] = [
       es: "Sopa con bolitas flotantes de pasta de pez de leche, una forma de comerlo propia de Tainan.",
     },
     mapQuery: "阿鳳浮水虱目魚羹 台南",
+    location: { lat: 22.9902842, lng: 120.1962893 },
     localPick: true,
   },
   {
@@ -736,6 +780,7 @@ export const places: Place[] = [
       es: "Sopa de piel de pez de leche y ventresca, un desayuno muy típico de Tainan. Ve temprano.",
     },
     mapQuery: "王氏魚皮 台南",
+    location: { lat: 22.998989, lng: 120.1688957 },
     localPick: true,
   },
   {
@@ -749,6 +794,7 @@ export const places: Place[] = [
       es: "Wa-kue (pastel de arroz salado al vapor) con sopa espesa de pescado, una combinación clásica de Tainan.",
     },
     mapQuery: "一味品碗粿魚羹 台南",
+    location: { lat: 22.9975513, lng: 120.1988988 },
     michelinBib: 2026,
     localPick: true,
   },
@@ -763,6 +809,7 @@ export const places: Place[] = [
       es: "Bollos al vapor taiwaneses y zongzi (arroz glutinoso envuelto en hoja), perfectos como tentempié o para llevar.",
     },
     mapQuery: "克林台包 台南",
+    location: { lat: 22.9891263, lng: 120.2047623 },
     localPick: true,
   },
   {
@@ -776,6 +823,7 @@ export const places: Place[] = [
       es: "Maíz asado entre piedras calientes, muy aromático y fácil de comer mientras paseas.",
     },
     mapQuery: "石頭鄉燜烤香味玉米 台南",
+    location: { lat: 22.9906518, lng: 120.1951537 },
     localPick: true,
   },
   {
@@ -789,6 +837,7 @@ export const places: Place[] = [
       es: "Una heladería de toda la vida, famosa por su granizado de leche con judía roja. Imprescindible en verano.",
     },
     mapQuery: "太陽牌冰品 台南",
+    location: { lat: 22.9895458, lng: 120.2103119 },
     localPick: true,
   },
   {
@@ -802,6 +851,7 @@ export const places: Place[] = [
       es: "Una cafetería muy popular con mesas en la segunda y tercera planta, conocida por su tarta de queso vasca.",
     },
     mapQuery: "懨懨 台南",
+    location: { lat: 22.9908397, lng: 120.2125149 },
     localPick: true,
   },
   // TODO：介紹寫得比較簡單，可以改成你自己的推薦語
@@ -816,6 +866,7 @@ export const places: Place[] = [
       es: "Una cafetería en Tainan.",
     },
     mapQuery: "軌咖啡 台南",
+    location: { lat: 22.9946246, lng: 120.2071419 },
     localPick: true,
   },
   // TODO：介紹寫得比較簡單，可以改成你自己的推薦語
@@ -830,6 +881,7 @@ export const places: Place[] = [
       es: "Una cafetería en Tainan.",
     },
     mapQuery: "無責任咖啡 Irresponsible Cafe 台南",
+    location: { lat: 22.9912418, lng: 120.2111343 },
     localPick: true,
   },
   // TODO：介紹寫得比較簡單，可以改成你自己的推薦語
@@ -844,6 +896,7 @@ export const places: Place[] = [
       es: "Una cafetería en Tainan.",
     },
     mapQuery: "秘氏咖啡 台南",
+    location: { lat: 22.997277, lng: 120.1985813 },
     localPick: true,
   },
   // TODO：介紹寫得比較簡單，可以改成你自己的推薦語
@@ -858,6 +911,7 @@ export const places: Place[] = [
       es: "Una cafetería en Tainan.",
     },
     mapQuery: "Present Coffee 台南",
+    location: { lat: 22.9987121, lng: 120.1995184 },
     localPick: true,
   },
   // TODO：介紹寫得比較簡單，可以改成你自己的推薦語
@@ -872,6 +926,7 @@ export const places: Place[] = [
       es: "Un puesto de té negro en Tainan.",
     },
     mapQuery: "藥師的私房紅茶 台南",
+    location: { lat: 22.9900921, lng: 120.1989015 },
     localPick: true,
   },
   // TODO：介紹寫得比較簡單，可以改成你自己的推薦語
@@ -886,6 +941,7 @@ export const places: Place[] = [
       es: "Un herbolario tradicional cerca de la Torre Chihkan.",
     },
     mapQuery: "赤崁中藥行 台南",
+    location: { lat: 22.9985496, lng: 120.2023874 },
     localPick: true,
   },
   // TODO：介紹寫得比較簡單，可以改成你自己的推薦語
@@ -900,6 +956,7 @@ export const places: Place[] = [
       es: "Una tienda de ropa en Tainan.",
     },
     mapQuery: "香蘭男子電棒燙 台南",
+    location: { lat: 22.9973858, lng: 120.1988172 },
     localPick: true,
   },
 
@@ -915,6 +972,7 @@ export const places: Place[] = [
       es: "Un local de arroz con pato en Kaohsiung, recomendado en la lista Bib Gourmand.",
     },
     mapQuery: "侯記鴨肉飯 高雄",
+    location: { lat: 22.6347476, lng: 120.2915481 },
     michelinBib: 2026,
   },
   {
@@ -928,6 +986,7 @@ export const places: Place[] = [
       es: "Codillo de cerdo guisado a fuego lento sobre arroz, tierno y lleno de sabor.",
     },
     mapQuery: "良佳豬腳 高雄",
+    location: { lat: 22.64188, lng: 120.3417888 },
     michelinBib: 2026,
   },
 ];

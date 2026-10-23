@@ -38,5 +38,12 @@
     "type": "Tipo",
     "region": "Región",
     "empty": "Ningún lugar coincide con estos filtros. Prueba otra combinación."
+  },
+  "map": {
+    "label": "Mapa",
+    "locateMe": "Mostrar mi ubicación",
+    "locating": "Buscando tu ubicación…",
+    "locationError": "No se pudo obtener tu ubicación. Comprueba que el navegador tiene permiso de ubicación.",
+    "close": "Cerrar"
   }
 }
