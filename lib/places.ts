@@ -14,6 +14,8 @@ export type Category = (typeof categories)[number]; // "sight" | "food" | "cafe"
 export const regions = [
   "taipei",
   "new-taipei",
+  "keelung",
+  "taoyuan",
   "hsinchu",
   "taichung",
   "nantou",
