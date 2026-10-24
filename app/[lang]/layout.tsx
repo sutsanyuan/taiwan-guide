@@ -11,57 +11,48 @@ import "../fonts/line-seed-tw/line-seed-tw.css";
 // 標題字體：Krona One（只有一種粗細，所以要指定 weight）
 // latin-ext 包含西語的 á é ñ
 const krona = Krona_One({
-  weight: "400",
-  subsets: ["latin", "latin-ext"],
-  variable: "--font-krona",
+    weight: "400",
+    subsets: ["latin", "latin-ext"],
+    variable: "--font-krona",
 });
 
 // 內文字體：Manrope（可變字體，粗細不用指定）
 const manrope = Manrope({
-  subsets: ["latin", "latin-ext"],
-  variable: "--font-manrope",
+    subsets: ["latin", "latin-ext"],
+    variable: "--font-manrope",
 });
 
 // 告訴 Next.js：打包時要產生 /zh-TW 和 /en 兩個版本的靜態頁面
 export function generateStaticParams() {
-  return locales.map((lang) => ({ lang }));
+    return locales.map((lang) => ({ lang }));
 }
 
 // <title> 和網頁描述也要跟著語言變，所以用函式產生，而不是寫死
-export async function generateMetadata({
-  params,
-}: LayoutProps<"/[lang]">): Promise<Metadata> {
-  const { lang } = await params;
-  if (!isLocale(lang)) return {};
+export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Promise<Metadata> {
+    const { lang } = await params;
+    if (!isLocale(lang)) return {};
 
-  const t = await getT(lang);
-  return {
-    title: t("meta.title"),
-    description: t("meta.description"),
-  };
+    const t = await getT(lang);
+    return {
+        title: t("meta.title"),
+        description: t("meta.description"),
+    };
 }
 
-export default async function RootLayout({
-  children,
-  params,
-}: LayoutProps<"/[lang]">) {
-  const { lang } = await params;
+export default async function RootLayout({ children, params }: LayoutProps<"/[lang]">) {
+    const { lang } = await params;
 
-  // 網址是 /fr 這種不支援的語言 → 顯示 404
-  if (!isLocale(lang)) notFound();
+    // 網址是 /fr 這種不支援的語言 → 顯示 404
+    if (!isLocale(lang)) notFound();
 
-  return (
-    <html
-      lang={lang}
-      className={`${krona.variable} ${manrope.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
-        <header className="flex justify-end p-4">
-          <LanguageSwitcher currentLang={lang} />
-        </header>
-        {children}
-      </body>
-    </html>
-  );
+    return (
+        <html lang={lang} className={`${krona.variable} ${manrope.variable} h-full antialiased`}>
+            <body className="min-h-full flex flex-col" suppressHydrationWarning>
+                <header className="flex justify-end p-4">
+                    <LanguageSwitcher currentLang={lang} />
+                </header>
+                {children}
+            </body>
+        </html>
+    );
 }
-
