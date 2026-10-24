@@ -935,6 +935,21 @@ export const places: Place[] = [
   },
   // TODO：介紹寫得比較簡單，可以改成你自己的推薦語
   {
+    id: "hong-kong-xin-hua",
+    category: "food",
+    region: "taipei",
+    name: { "zh-TW": "香港鑫華茶餐廳", en: "Xin Hua Hong Kong Café", es: "Xin Hua Hong Kong Café" },
+    description: {
+      "zh-TW": "港式茶餐廳，在台北也能吃到香港的日常味道。",
+      en: "A Hong Kong-style cha chaan teng: everyday Hong Kong comfort food in Taipei.",
+      es: "Un cha chaan teng al estilo de Hong Kong: la comida cotidiana de Hong Kong en Taipéi.",
+    },
+    mapQuery: "香港鑫華茶餐廳 台北",
+    location: { lat: 25.0315368, lng: 121.5285299 },
+    localPick: true,
+  },
+  // TODO：介紹寫得比較簡單，可以改成你自己的推薦語
+  {
     id: "huang-long-zhuang",
     category: "food",
     region: "taipei",
