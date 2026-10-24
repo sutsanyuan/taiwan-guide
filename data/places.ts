@@ -240,6 +240,22 @@ export const places: Place[] = [
     },
   },
 
+  // 台北：我的私房景點
+  {
+    id: "old-place-plane-spotting",
+    category: "sight",
+    region: "taipei",
+    name: { "zh-TW": "老地方觀機平台", en: "Laodifang Plane-Spotting Platform", es: "Mirador de aviones Laodifang" },
+    description: {
+      "zh-TW": "就在松山機場跑道旁，飛機從頭頂低空飛過，可以近距離看飛機起降。",
+      en: "Right next to the Songshan Airport runway: planes fly low overhead, so you can watch take-offs and landings up close.",
+      es: "Justo al lado de la pista del aeropuerto de Songshan: los aviones pasan muy bajo, así que puedes ver despegues y aterrizajes de cerca.",
+    },
+    mapQuery: "老地方觀機平台 台北",
+    location: { lat: 25.0904311, lng: 121.5367826 },
+    localPick: true,
+  },
+
   // --- 新北 ---
   {
     id: "jiufen",
@@ -840,6 +856,126 @@ export const places: Place[] = [
     },
     mapQuery: "誠品生活松菸 台北",
     location: { lat: 25.044545, lng: 121.5614574 },
+  },
+
+  // 台北：我的私房推薦（localPick）
+  // TODO：介紹寫得比較簡單，可以改成你自己的推薦語
+  {
+    id: "yao-shi",
+    category: "food",
+    region: "taipei",
+    name: { "zh-TW": "妖食 手作食堂", en: "Yao Shi Handmade Kitchen", es: "Yao Shi Handmade Kitchen" },
+    description: {
+      "zh-TW": "永康街上的亞洲融合料理小食堂。",
+      en: "A small Asian-fusion kitchen on Yongkang Street.",
+      es: "Un pequeño restaurante de cocina fusión asiática en la calle Yongkang.",
+    },
+    mapQuery: "妖食 手作食堂 永康街",
+    location: { lat: 25.0289968, lng: 121.5297505 },
+    localPick: true,
+  },
+  {
+    id: "lin-chi-beef-noodles",
+    category: "food",
+    region: "taipei",
+    name: { "zh-TW": "林記牛肉麵", en: "Lin Chi Beef Noodles", es: "Lin Chi Beef Noodles" },
+    description: {
+      "zh-TW": "潮州街巷子裡的紅燒牛肉麵，湯頭香但不膩，招牌是牛筋牛肉一起來的半筋半肉麵。",
+      en: "Red-braised beef noodle soup in a lane off Chaozhou Street: rich but not heavy. Order the signature bowl with both tendon and beef.",
+      es: "Sopa de fideos con ternera guisada en un callejón de la calle Chaozhou: sabrosa pero nada pesada. Pide el cuenco estrella con tendón y carne.",
+    },
+    mapQuery: "林記牛肉麵 潮州街",
+    location: { lat: 25.0283855, lng: 121.5238138 },
+    localPick: true,
+  },
+  // TODO：介紹寫得比較簡單，可以改成你自己的推薦語
+  {
+    id: "huang-long-zhuang",
+    category: "food",
+    region: "taipei",
+    name: { "zh-TW": "黃龍莊", en: "Huang Long Zhuang", es: "Huang Long Zhuang" },
+    description: {
+      "zh-TW": "台北的餐廳。",
+      en: "A restaurant in Taipei.",
+      es: "Un restaurante en Taipéi.",
+    },
+    mapQuery: "黃龍莊 台北",
+    location: { lat: 25.0300122, lng: 121.5165862 },
+    localPick: true,
+  },
+  // TODO：介紹寫得比較簡單，可以改成你自己的推薦語
+  {
+    id: "kakigori-toshihiko",
+    category: "food",
+    region: "taipei",
+    name: { "zh-TW": "KAKIGORI TOSHIHIKO", en: "KAKIGORI TOSHIHIKO", es: "KAKIGORI TOSHIHIKO" },
+    description: {
+      "zh-TW": "日式刨冰店，冰削得像雪一樣細，配上手作的醬汁。",
+      en: "A Japanese-style kakigori shop: ice shaved as fine as snow, topped with house-made syrups.",
+      es: "Una tienda de kakigori al estilo japonés: hielo raspado fino como la nieve con siropes caseros.",
+    },
+    mapQuery: "KAKIGORI TOSHIHIKO 台北",
+    location: { lat: 25.0232114, lng: 121.5247093 },
+    localPick: true,
+  },
+  // TODO：介紹寫得比較簡單，可以改成你自己的推薦語
+  {
+    id: "thai-street",
+    category: "food",
+    region: "taipei",
+    name: { "zh-TW": "泰街頭", en: "Thai Street", es: "Thai Street" },
+    description: {
+      "zh-TW": "泰式街頭小吃風格的餐廳，不接受訂位，建議早點去。",
+      en: "A Thai street-food style restaurant. They don't take reservations, so go early.",
+      es: "Un restaurante de comida callejera tailandesa. No aceptan reservas, así que ve temprano.",
+    },
+    mapQuery: "泰街頭 台北",
+    location: { lat: 25.0197316, lng: 121.5321851 },
+    localPick: true,
+  },
+  // TODO：介紹寫得比較簡單，可以改成你自己的推薦語
+  {
+    id: "overthink",
+    category: "food",
+    region: "taipei",
+    name: { "zh-TW": "overthink 餐飲小吃部", en: "overthink", es: "overthink" },
+    description: {
+      "zh-TW": "台北的餐廳。",
+      en: "A restaurant in Taipei.",
+      es: "Un restaurante en Taipéi.",
+    },
+    mapQuery: "overthink 餐飲小吃部 台北",
+    location: { lat: 25.0257769, lng: 121.5173134 },
+    localPick: true,
+  },
+  {
+    id: "jinjiang-tea-house",
+    category: "cafe",
+    region: "taipei",
+    name: { "zh-TW": "晉江茶堂", en: "Jinjiang Tea House", es: "Casa de té Jinjiang" },
+    description: {
+      "zh-TW": "可以自己動手磨擂茶的客家茶堂：把茶葉、芝麻、花生等放進缽裡磨成粉，再沖成一碗擂茶。",
+      en: "A Hakka teahouse where you make your own lei cha (pounded tea): grind tea leaves, sesame and peanuts in a bowl, then pour on hot water.",
+      es: "Una casa de té hakka donde preparas tu propio lei cha (té machacado): mueles hojas de té, sésamo y cacahuetes en un cuenco y luego añades agua caliente.",
+    },
+    mapQuery: "晉江茶堂 台北",
+    location: { lat: 25.0263631, lng: 121.5211358 },
+    localPick: true,
+  },
+  // TODO：介紹寫得比較簡單，可以改成你自己的推薦語
+  {
+    id: "sixty-plus-tea",
+    category: "cafe",
+    region: "taipei",
+    name: { "zh-TW": "60+ Tea Shop（師大店）", en: "60+ Tea Shop (Shida)", es: "60+ Tea Shop (Shida)" },
+    description: {
+      "zh-TW": "從台南紅到台北的手搖飲料店，在師大夜市附近。",
+      en: "A bubble-tea brand from Tainan that's now in Taipei, near Shida Night Market.",
+      es: "Una marca de té de burbujas de Tainan que ya ha llegado a Taipéi, cerca del mercado nocturno de Shida.",
+    },
+    mapQuery: "60+ Tea Shop 師大店",
+    location: { lat: 25.0230258, lng: 121.5285482 },
+    localPick: true,
   },
 
   // --- 新北 ---
