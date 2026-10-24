@@ -890,6 +890,51 @@ export const places: Place[] = [
   },
   // TODO：介紹寫得比較簡單，可以改成你自己的推薦語
   {
+    id: "kuo-chi-beef-noodles",
+    category: "food",
+    region: "taipei",
+    name: { "zh-TW": "郭記牛肉麵", en: "Kuo Chi Beef Noodles", es: "Kuo Chi Beef Noodles" },
+    description: {
+      "zh-TW": "台北的牛肉麵店。",
+      en: "A beef noodle shop in Taipei.",
+      es: "Un local de sopa de fideos con ternera en Taipéi.",
+    },
+    mapQuery: "郭記牛肉麵 台北",
+    location: { lat: 25.024173, lng: 121.5213816 },
+    localPick: true,
+  },
+  // TODO：介紹寫得比較簡單，可以改成你自己的推薦語
+  {
+    id: "18-champion-beef-noodles",
+    category: "food",
+    region: "taipei",
+    name: { "zh-TW": "18冠軍牛肉麵", en: "18 Champion Beef Noodles", es: "18 Champion Beef Noodles" },
+    description: {
+      "zh-TW": "台北的牛肉麵店。",
+      en: "A beef noodle shop in Taipei.",
+      es: "Un local de sopa de fideos con ternera en Taipéi.",
+    },
+    mapQuery: "18冠軍牛肉麵 台北",
+    location: { lat: 25.0277433, lng: 121.5546686 },
+    localPick: true,
+  },
+  // TODO：介紹寫得比較簡單，可以改成你自己的推薦語
+  {
+    id: "lai-le-jiu-chi",
+    category: "food",
+    region: "taipei",
+    name: { "zh-TW": "來了就吃", en: "Lai Le Jiu Chi", es: "Lai Le Jiu Chi" },
+    description: {
+      "zh-TW": "台北的餐廳。",
+      en: "A restaurant in Taipei.",
+      es: "Un restaurante en Taipéi.",
+    },
+    mapQuery: "來了就吃 台北",
+    location: { lat: 25.0313108, lng: 121.5273124 },
+    localPick: true,
+  },
+  // TODO：介紹寫得比較簡單，可以改成你自己的推薦語
+  {
     id: "huang-long-zhuang",
     category: "food",
     region: "taipei",
