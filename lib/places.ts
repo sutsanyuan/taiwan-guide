@@ -18,11 +18,17 @@ export const regions = [
   "taoyuan",
   "hsinchu",
   "taichung",
+  "changhua",
   "nantou",
+  "yunlin",
   "chiayi",
   "tainan",
   "kaohsiung",
+  "pingtung",
+  "yilan",
   "hualien",
+  "taitung",
+  "penghu",
 ] as const;
 export type Region = (typeof regions)[number];
 

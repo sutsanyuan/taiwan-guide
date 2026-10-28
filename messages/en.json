@@ -20,11 +20,17 @@
     "taoyuan": "Taoyuan",
     "hsinchu": "Hsinchu",
     "taichung": "Taichung",
+    "changhua": "Changhua",
     "nantou": "Nantou",
+    "yunlin": "Yunlin",
     "chiayi": "Chiayi",
     "tainan": "Tainan",
     "kaohsiung": "Kaohsiung",
-    "hualien": "Hualien"
+    "pingtung": "Pingtung",
+    "yilan": "Yilan",
+    "hualien": "Hualien",
+    "taitung": "Taitung",
+    "penghu": "Penghu"
   },
   "place": {
     "openMap": "Open in Google Maps",
