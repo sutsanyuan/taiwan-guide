@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Krona_One, Manrope } from "next/font/google";
-import { isLocale, locales } from "@/lib/i18n/config";
+import { isLocale, locales, type Locale } from "@/lib/i18n/config";
 import { getT } from "@/lib/i18n/t";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import "../globals.css";
@@ -33,11 +33,40 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
     if (!isLocale(lang)) return {};
 
     const t = await getT(lang);
+    const title = t("meta.title");
+    const description = t("meta.description");
     return {
-        title: t("meta.title"),
-        description: t("meta.description"),
+        // 網站的正式網址：分享預覽圖要用「完整網址」，Next.js 會把下面的 /og/... 接在這後面
+        metadataBase: new URL("https://taiwan-guide-rho.vercel.app"),
+        title,
+        description,
+        // Open Graph：貼網址到 LINE、Facebook、Messenger 時顯示的標題、描述和大圖
+        openGraph: {
+            type: "website",
+            siteName: title,
+            title,
+            description,
+            url: `/${lang}`,
+            locale: ogLocale[lang],
+            // 每種語言一張圖，放在 public/og/
+            images: [{ url: `/og/${lang}.png`, width: 1200, height: 630, alt: title }],
+        },
+        // X（Twitter）用的設定：summary_large_image = 顯示大圖
+        twitter: {
+            card: "summary_large_image",
+            title,
+            description,
+            images: [`/og/${lang}.png`],
+        },
     };
 }
+
+// Open Graph 的語言代碼格式是「語言_地區」，和網址用的 zh-TW 寫法不一樣
+const ogLocale: Record<Locale, string> = {
+    "zh-TW": "zh_TW",
+    en: "en_US",
+    es: "es_ES",
+};
 
 export default async function RootLayout({ children, params }: LayoutProps<"/[lang]">) {
     const { lang } = await params;
