@@ -1,11 +1,12 @@
 # Taiwan Hidden Gems · 台灣私房景點
 
+**Live demo:** https://taiwan-guide-rho.vercel.app/
+
+![Taiwan Hidden Gems](docs/taiwan-hidden-gems-thumbnail.png)
+
 A multilingual guide to Taiwan's sights and food, built for friends from Europe visiting Taiwan for the first time. It's also my front-end portfolio piece and the project I use to learn TypeScript, Next.js and internationalisation (i18n).
 
 給來台灣玩的歐洲朋友的多語系景點與美食指南，也是我的前端作品集，以及我學 TypeScript、Next.js 和多語系的練習專案。
-
-**Live demo:** https://taiwan-guide-rho.vercel.app/
-![Taiwan Hidden Gems](docs/taiwan-hidden-gems-thumbnail.png)
 
 - **Languages / 語言：** 繁體中文 · English · Español
 - **Places / 地點：** 255 places across 17 regions: 71 sights, 163 restaurants, 12 cafés & drinks, 9 shops
